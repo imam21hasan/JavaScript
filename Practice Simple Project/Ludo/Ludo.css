@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 45px;
+  text-align: center;
+}
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+button {
+  margin: 20px 0;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: rgb(0, 255, 255);
+  border: 1px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button:hover{
+    background-color: black;
+    color: white;
+}
