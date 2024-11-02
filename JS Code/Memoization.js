@@ -4,7 +4,7 @@ function calculatingArea(num) {
 
 function memoFunc() {
   let cache = {};
-  return function optimizedSrq(num) {
+  return function optimizedCalArea(num) {
     if (num in cache) {
       console.log("Returning from Cache");
       // console.log(cache);
@@ -19,8 +19,8 @@ function memoFunc() {
 }
 const myOperation = memoFunc();
 
-console.log(myOperation(4));
-console.log(myOperation(4));
-console.log(myOperation(5));
-console.log(myOperation(99));
-console.log(myOperation(99));
+console.log(myOperation(8));
+console.log(myOperation(8));
+console.log(myOperation(15));
+console.log(myOperation(85));
+console.log(myOperation(85));
