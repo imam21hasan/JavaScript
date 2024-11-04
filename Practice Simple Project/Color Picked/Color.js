@@ -3,18 +3,18 @@ const colorDiv = document.querySelectorAll("div");
 
 colorDiv.forEach(function (value) {
   value.addEventListener("click", function () {
-    let colorName = this.classList[0];
+    let className = this.classList[0];
     let color = "";
-    if (colorName === "red") {
+    if (className === "red") {
       color = "red";
     }
-    if (colorName === "green") {
+    if (className === "green") {
       color = "green";
     }
-    if (colorName === "blue") {
+    if (className === "blue") {
       color = "blue";
     }
-    if (colorName === "orange") {
+    if (className === "orange") {
       color = "orange";
     }
 
