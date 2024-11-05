@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#container {
+  background-color: rgb(52, 68, 72);
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 25px 15px;
+  width: 85%;
+  text-align: center;
+
+  position: relative;
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+#container::after,
+#container::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(
+    from var(--angle),
+    red,
+    green,
+    blue,
+    violet,
+    orange
+  );
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 4px;
+  border-radius: 20px;
+  animation: ani 3s linear infinite;
+}
+#container::before {
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+@keyframes ani {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+#container p {
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+}
+#container h4 {
+  background-color: green;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: inline-block;
+}
+#container button {
+  display: block;
+  width: 150px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid silver;
+  margin: 20px auto 0;
+  font-weight: bold;
+  cursor: pointer;
+}
+#container button:hover {
+  background-color: blueviolet;
+  color: white;
+}
