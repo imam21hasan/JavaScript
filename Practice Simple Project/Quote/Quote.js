@@ -99,10 +99,7 @@ const quoteElement = document.getElementById("quote");
 const sourceElement = document.getElementById("source");
 const button = document.getElementById("button");
 
-function autoQuote() {
+button.addEventListener("click", function () {
   const quoteIndex = Math.floor(Math.random() * randomQuotes.length);
   quoteElement.textContent = randomQuotes[quoteIndex].quote;
   sourceElement.textContent = randomQuotes[quoteIndex].source;
-}
-autoQuote();
-button.addEventListener("click", autoQuote);
