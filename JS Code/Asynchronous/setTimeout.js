@@ -1,5 +1,3 @@
-// setTimeout(callback, timeinms);
-
 console.log("Imam");
 setTimeout(function () {
   console.log("Hasan");
